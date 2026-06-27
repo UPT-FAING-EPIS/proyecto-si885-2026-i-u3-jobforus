@@ -80,9 +80,9 @@ Desarrollar un dashboard que analice ofertas laborales del sector tecnológico, 
 **Análisis de Ofertas**
 ![dashboard2](media/dashboard2.PNG)
 
-**Análisis de Tecnologías Demandadas**
+**Análisis de Salarios**
 ![dashboard3](media/dashboard3.PNG)
 
-**Análisis de Salarios**
+**Análisis de Tecnologías Demandadas**
 ![dashboard4](media/dashboard4.PNG)
 
