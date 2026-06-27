@@ -20,11 +20,15 @@ Los estudiantes de Ingeniería de Sistemas enfrentan múltiples desafíos al mom
 
 5. **Toma de decisiones subóptima** al momento de elegir especialización, primer empleo o negociación salarial.
 
+6. **Experiencias y oportunidades perdidas** por la información fragmentada.  
+
 Esta falta de inteligencia de mercado laboral impacta directamente en:
 - Salarios iniciales por debajo del potencial real
 - Mayor tiempo de inserción laboral
 - Deserción temprana por expectativas no cumplidas
 - Desajuste entre habilidades adquiridas y habilidades demandadas
+- Decisiones basadas en intuición
+- Aceptar condiciones debajo de lo que pueden llegar a lograr.
 
 ---
 
@@ -32,7 +36,7 @@ Esta falta de inteligencia de mercado laboral impacta directamente en:
 
 **Objetivo General:**
 
-Desarrollar un Sistema que analice ofertas laborales del sector tecnológico, para proporcionar a los estudiantes de Ingeniería de Sistemas información confiable, actualizada y accionable sobre salarios, tecnologías demandadas y tendencias del mercado.
+Desarrollar un dashboard que analice ofertas laborales del sector tecnológico, para proporcionar a los estudiantes de Ingeniería de Sistemas o que estan dentro de la rama de la tecnología, información confiable, actualizada y accionable sobre salarios, tecnologías demandadas y tendencias del mercado.
 
 **Objetivos Específicos:**
 
@@ -81,3 +85,4 @@ Desarrollar un Sistema que analice ofertas laborales del sector tecnológico, pa
 
 **Análisis de Salarios**
 ![dashboard4](media/dashboard4.PNG)
+
