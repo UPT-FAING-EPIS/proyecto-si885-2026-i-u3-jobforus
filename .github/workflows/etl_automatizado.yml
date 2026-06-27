@@ -1,0 +1,46 @@
+name: ETL Automatizado - JobForUs
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  ejecutar-etl-y-carga:
+    name: Ejecutar ETL y cargar a BigQuery
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy google-cloud-bigquery
+          if [ -f "JobForUs - Sistema/requirements.txt" ]; then
+            pip install -r "JobForUs - Sistema/requirements.txt"
+          fi
+      
+      - name: Configurar credenciales GCP
+        run: |
+          mkdir -p "JobForUs - Sistema/credentials"
+          echo '${{ secrets.GCP_KEY }}' > "JobForUs - Sistema/credentials/gcp-key.json"
+      
+      - name: Ejecutar pipeline ETL (modo automático)
+        run: |
+          cd "JobForUs - Sistema"
+          python tests/test_pipeline_completo.py --auto
+      
+      - name: Cargar a BigQuery (modo automático)
+        run: |
+          cd "JobForUs - Sistema"
+          python src/load/bigquery_loader.py --auto
+      
+      - name: Notificar completado
+        run: echo "✅ ETL y carga completados exitosamente"

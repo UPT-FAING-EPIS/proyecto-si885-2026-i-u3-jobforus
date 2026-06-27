@@ -1,0 +1,33 @@
+name: Carga Diaria a BigQuery
+
+on:
+  schedule:
+    # Ejecutar todos los días a las 2 AM
+    - cron: '0 2 * * *'
+  workflow_dispatch:  # Permite ejecutar manualmente
+
+jobs:
+  cargar-datos:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+      
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      - name: Instalar dependencias
+        run: |
+          pip install pandas google-cloud-bigquery
+      
+      - name: Ejecutar carga a BigQuery
+        run: |
+          python "JobForUs - Sistema/src/load/bigquery_loader.py"
+          
+      - name: Configurar credenciales
+        run: |
+          mkdir -p credentials
+          echo '${{ secrets.GCP_CREDENTIALS }}' > credentials/gcp-key.json

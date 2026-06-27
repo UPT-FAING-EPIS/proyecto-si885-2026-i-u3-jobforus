@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Bases de datos
+*.db
+*.sqlite
+*.sqlite3
+
+# Datos (excepto muestras pequeñas)
+data/raw/*.csv
+data/processed/*.csv
+!data/raw/sample.csv
+
+# Dashboard Power BI
+*.pbix
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos temporales
+*.log
+*.tmp
+.DS_Store
+
+# Credenciales y secretos
+credentials/
+*.json
+!requirements.txt

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobForUs - Dashboard Mercado Laboral Tecnológico</title>
+    <style>
+        /* ============================================================
+           ESTILOS GLOBALES
+           ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e8f0fe 0%, #f5f7fa 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.10);
+            padding: 30px 30px 20px 30px;
+        }
+
+        /* ============================================================
+           ENCABEZADO
+           ============================================================ */
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #1a73e8;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #1a1a2e;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .header h1 span {
+            color: #1a73e8;
+        }
+
+        .header .subtitle {
+            font-size: 16px;
+            color: #5f6368;
+            margin-top: 6px;
+            font-weight: 400;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #1a73e8;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-top: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        /* ============================================================
+           DESCRIPCIÓN
+           ============================================================ */
+        .description {
+            background: #f0f4ff;
+            border-left: 5px solid #1a73e8;
+            padding: 14px 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 15px;
+            color: #2d3436;
+            line-height: 1.6;
+        }
+
+        .description strong {
+            color: #1a73e8;
+        }
+
+        /* ============================================================
+           IFRAME (Dashboard)
+           ============================================================ */
+        .dashboard-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Relación 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            background: #f8f9fa;
+        }
+
+        .dashboard-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        .footer {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-top: 18px;
+            border-top: 1px solid #e9ecef;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .footer a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .tech-badges span {
+            display: inline-block;
+            background: #e9ecef;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-left: 6px;
+            color: #495057;
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 768px) {
+            .container {
+                padding: 16px;
+            }
+            .header h1 {
+                font-size: 22px;
+            }
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ============================================
+        ENCABEZADO
+        ============================================ -->
+        <div class="header">
+            <h1>📊 <span>JobForUs</span> · Mercado Laboral Tecnológico</h1>
+            <p class="subtitle">Dashboard interactivo de salarios y demanda de tecnologías en el sector TI</p>
+            <span class="badge">📌 Proyecto Académico · Inteligencia de Negocios</span>
+        </div>
+
+        <!-- ============================================
+        DESCRIPCIÓN
+        ============================================ -->
+        <div class="description">
+            <strong>🔍 ¿Qué puedes explorar aquí?</strong><br>
+            Este dashboard analiza más de <strong>11,900 ofertas laborales</strong> del sector tecnológico (2020–2025).
+            Descubre salarios por rol y seniority, tecnologías más demandadas, evolución temporal,
+            adopción de IA, brecha salarial y mucho más.<br>
+            <span style="font-size:14px; color:#5f6368;">
+            📌 Datos procesados con Python · Almacenados en BigQuery · Visualizados con Power BI
+            </span>
+        </div>
+
+        <!-- ============================================
+        DASHBOARD (IFRAME)
+        ============================================ -->
+        <div class="dashboard-wrapper">
+            <iframe
+                title="JobForUs - Dashboard"
+                src="https://app.powerbi.com/reportEmbed?reportId=da986cc6-5770-422e-912c-d75d4d3fcc1e&autoAuth=true&ctid=b6b466ee-468d-4011-b9fc-fbdcf82ac90a"
+                allowFullScreen="true">
+            </iframe>
+        </div>
+
+        <!-- ============================================
+        FOOTER
+        ============================================ -->
+        <div class="footer">
+            <div>
+                📊 <strong>JobForUs</strong> · Sistema de Inteligencia de Mercado Laboral
+            </div>
+            <div class="tech-badges">
+                ⚙️ <span>Python</span> <span>BigQuery</span> <span>Power BI</span> <span>GitHub Actions</span>
+            </div>
+            <div>
+                📅 Datos 2020–2025 · <a href="https://github.com/UPT-FAING-EPIS/proyecto-si885-2026-i-jobsforus-u1.git" target="_blank">Ver código fuente</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
