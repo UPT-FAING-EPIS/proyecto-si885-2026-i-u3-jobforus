@@ -1,8 +1,8 @@
-# 📊 JobsForUs
+# 📊 JobsForUS
 
 ## 🎯 Título del Proyecto
 
-**Sistema de Inteligencia de Negocios para el Análisis del Mercado Laboral Tecnológico**
+**JobForUS, Dashboard para el Análisis del Mercado Laboral Tecnológico**
 
 ---
 
@@ -38,18 +38,18 @@ Desarrollar un Sistema que analice ofertas laborales del sector tecnológico, pa
 
 | # | Objetivo Específico | Indicador de éxito |
 |---|---------------------|---------------------|
-| 1 | Extraer y consolidar datos de al menos 1000 ofertas laborales del sector TI desde fuentes públicas disponibles en GitHub | Base de datos con registros limpios y normalizados |
+| 1 | Extraer y consolidar datos de al menos 10000 ofertas laborales del sector TI desde fuentes públicas disponibles en Kaggle | Base de datos con registros limpios y normalizados |
 | 2 | Clasificar las ofertas por rol, nivel de seniority, tecnologías requeridas y ubicación geográfica | Diccionario de clasificación con precisión >85% |
 | 3 | Calcular estadísticas de salarios promedio, mediana y percentiles por combinación de rol y seniority | Tabla salarial con 15+ combinaciones |
-| 4 | Identificar las 10 tecnologías más demandadas y su evolución en los últimos años | Ranking actualizado y gráfico de tendencias |
+| 4 | Identificar las tecnologías más demandadas y su evolución en los últimos años | Ranking actualizado y gráfico de tendencias |
 | 5 | Construir un dashboard interactivo que permita filtrar y visualizar los hallazgos clave | Dashboard funcional accesible vía web |
-| 6 | Documentar todo el proceso (factibilidad, visión, requerimientos, arquitectura, informe final) | 5 documentos técnicos completos |
+| 6 | Documentar todo el proceso (factibilidad, visión, requerimientos, arquitectura, informe final) | 6 documentos técnicos completos |
 
 **Alcance del Proyecto:**
 
-- ✅ Análisis de ofertas para roles técnicos (desarrollo, datos, infraestructura, seguridad)
+- ✅ Análisis de ofertas detallando los requisitos, salarios, disponibilidades y la ubicación en un mapa mundial.
 - ✅ Incluye niveles Junior, Mid, Senior y Lead
-- ✅ Datos provenientes de fuentes públicas (GitHub, Kaggle)
+- ✅ Datos provenientes de fuentes públicas (Kaggle)
 - ✅ Dashboard con filtros interactivos
 - ❌ Excluye ofertas no técnicas (ventas, marketing, administrativo)
 - ❌ Excluye scraping en tiempo real de portales (por restricciones legales)
@@ -62,10 +62,10 @@ Desarrollar un Sistema que analice ofertas laborales del sector tecnológico, pa
 |------------|------------|-----------|
 | Extracción | Python + Requests | Descarga de datasets desde GitHub |
 | Transformación | Python + Pandas | Limpieza y normalización de datos |
-| Almacenamiento | SQLite / PostgreSQL | Base de datos relacional |
+| Almacenamiento | SQLite / BigQuery | Base de datos relacional |
 | Visualización | Power BI | Dashboard interactivo |
 | Control de versiones | GitHub | Repositorio del proyecto |
-
+| Automatización | GitHub Actions | Cargar datos diariamente |
 ---
 
 ## Capturas del Dashoboard mediante PowerBI
@@ -73,11 +73,11 @@ Desarrollar un Sistema que analice ofertas laborales del sector tecnológico, pa
 **Resumen General**
 ![dashboard1](media/dashboard1.PNG)
 
-**Análisis de Salarios**
+**Análisis de Ofertas**
 ![dashboard2](media/dashboard2.PNG)
 
-**Demanda por Tecnología**
+**Análisis de Tecnologías Demandadas**
 ![dashboard3](media/dashboard3.PNG)
 
-**Detalle de Ofertas**
+**Análisis de Salarios**
 ![dashboard4](media/dashboard4.PNG)
